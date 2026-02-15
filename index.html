@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PantryPilot - Cook with Confidence</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- FontAwesome Placeholder, might need actual kit or SVG icons -->
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">PantryPilot</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Cook with Confidence, <br> Every Single Time.</h1>
+                <p>PantryPilot is your real-time vision-based cooking assistant. Get step-by-step guidance, timing
+                    alerts, and texture checks right when you need them.</p>
+                <a href="#demo" class="btn btn-primary">Watch Demo</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://placehold.co/600x400/1e293b/10b981?text=Cooking+Assistant+POV"
+                    alt="Student cooking with smart assistant">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why PantryPilot?</h2>
+                <p>Overcoming the small uncertainties in everyday cooking.</p>
+            </div>
+            <div class="about-grid">
+                <div class="card">
+                    <div class="icon">🔥</div>
+                    <h3>The Problem</h3>
+                    <p>Uncertainties like "Is the pan hot enough?" or "Is this golden brown yet?" often lead to kitchen
+                        failed experiments.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">👁️</div>
+                    <h3>The Solution</h3>
+                    <p>A vision-based AI assistant that watches your pan and gives real-time, context-aware guidance.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="icon">🚀</div>
+                    <h3>The Impact</h3>
+                    <p>Empowers anyone to cook complex dishes with confidence, reducing food waste and boosting culinary
+                        skills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <div class="section-header">
+                <h2>See It In Action</h2>
+                <p class="disclaimer">⚠️ Disclaimer: This is a demo version, not a fully built system.</p>
+            </div>
+            <div class="demo-content">
+                <div class="video-container">
+                    <!-- Placeholder for embedded video -->
+                    <!-- Video Player for Local File -->
+                    <div class="video-container-styled">
+                        <video controls poster="https://placehold.co/600x337/1e293b/10b981?text=Video+Preview">
+                            <source src="video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="video-note">📌 Note: Please place your video file named <code>video.mp4</code> in the
+                            project folder.</p>
+                    </div>
+                </div>
+                <div class="interactive-mockup">
+                    <div class="mockup-screen">
+                        <img src="https://placehold.co/400x600/1e293b/10b981?text=Cooking+POV" alt="Cooking POV"
+                            id="mockup-bg">
+                        <div class="overlay-ui" id="overlay-ui">
+                            <div class="status-badge">Analyzing...</div>
+                            <div class="instruction-box">
+                                <span class="step-number">Step 2:</span>
+                                <span class="instruction-text">Wait for water to boil</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>Have questions or want to collaborate?</p>
+            </div>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Jane Doe">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="jane@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required
+                        placeholder="Your message here..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 PantryPilot Team. Built for TreeHacks.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

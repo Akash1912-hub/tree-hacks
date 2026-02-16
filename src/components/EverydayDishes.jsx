@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 export default function EverydayDishes() {
     const dishes = [
         {
@@ -28,7 +26,7 @@ export default function EverydayDishes() {
     const scrollDishes = [...dishes, ...dishes];
 
     return (
-        <section className="py-20 bg-[#fbfbf9] overflow-hidden">
+        <section className="py-20 bg-transparent overflow-hidden">
             <style>{`
                 @keyframes scroll {
                     0% { transform: translateX(0); }
@@ -55,14 +53,10 @@ export default function EverydayDishes() {
                 </div>
 
                 {/* Infinite Marquee */}
-                <div className="relative w-full overflow-hidden">
-                    {/* Gradient Masks */}
-                    <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#fbfbf9] to-transparent z-10 pointer-events-none"></div>
-                    <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#fbfbf9] to-transparent z-10 pointer-events-none"></div>
-
-                    <div className="animate-scroll gap-6">
+                <div className="relative w-full overflow-hidden" style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}>
+                    <div className="animate-scroll gap-6 py-4">
                         {scrollDishes.map((dish, index) => (
-                            <div key={index} className="w-[300px] flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 group">
+                            <div key={index} className="w-[300px] flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100 group">
                                 <div className="aspect-[4/3] overflow-hidden">
                                     <img
                                         src={dish.image}

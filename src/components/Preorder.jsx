@@ -2,7 +2,7 @@ import { User, Mail, Phone, MessageSquare, Utensils } from 'lucide-react'
 
 export default function Preorder() {
     return (
-        <section id="waitlist" className="py-24 bg-white relative">
+        <section id="waitlist" className="py-24 bg-transparent relative">
             <div className="container mx-auto px-6 max-w-4xl relative z-10">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
@@ -17,64 +17,64 @@ export default function Preorder() {
                     <form className="space-y-8">
                         <div className="grid md:grid-cols-2 gap-8">
                             {/* Name Input */}
-                            <div className="flex border border-slate-200 rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-orange-500 focus-within:border-orange-500 transition-all hover:border-slate-300">
+                            <div className="flex border border-slate-200 bg-slate-50 rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-orange-500 focus-within:border-orange-500 transition-all hover:border-slate-300">
                                 <div className="bg-slate-50 px-4 flex items-center justify-center border-r border-slate-200 min-w-[60px]">
                                     <User className="text-slate-400" size={20} />
                                 </div>
                                 <input
                                     type="text"
-                                    className="w-full px-4 py-4 outline-none placeholder:text-slate-400 text-slate-700"
+                                    className="w-full px-4 py-4 outline-none placeholder:text-slate-400 text-slate-700 bg-transparent"
                                     placeholder="Name*"
                                     required
                                 />
                             </div>
 
-                            {/* Phone Input (Replacing 'Company' from ref) */}
-                            <div className="flex border border-slate-200 rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-orange-500 focus-within:border-orange-500 transition-all hover:border-slate-300">
+                            {/* Phone Input */}
+                            <div className="flex border border-slate-200 bg-slate-50 rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-orange-500 focus-within:border-orange-500 transition-all hover:border-slate-300">
                                 <div className="bg-slate-50 px-4 flex items-center justify-center border-r border-slate-200 min-w-[60px]">
                                     <Phone className="text-slate-400" size={20} />
                                 </div>
                                 <input
                                     type="tel"
-                                    className="w-full px-4 py-4 outline-none placeholder:text-slate-400 text-slate-700"
+                                    className="w-full px-4 py-4 outline-none placeholder:text-slate-400 text-slate-700 bg-transparent"
                                     placeholder="Phone"
                                 />
                             </div>
 
                             {/* Email Input */}
-                            <div className="flex border border-slate-200 rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-orange-500 focus-within:border-orange-500 transition-all hover:border-slate-300">
+                            <div className="flex border border-slate-200 bg-slate-50 rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-orange-500 focus-within:border-orange-500 transition-all hover:border-slate-300">
                                 <div className="bg-slate-50 px-4 flex items-center justify-center border-r border-slate-200 min-w-[60px]">
                                     <Mail className="text-slate-400" size={20} />
                                 </div>
                                 <input
                                     type="email"
-                                    className="w-full px-4 py-4 outline-none placeholder:text-slate-400 text-slate-700"
+                                    className="w-full px-4 py-4 outline-none placeholder:text-slate-400 text-slate-700 bg-transparent"
                                     placeholder="Email Address*"
                                     required
                                 />
                             </div>
 
-                            {/* Preferences Input (Replacing 'Phone' duplicate if needed, or keeping structure) */}
-                            <div className="flex border border-slate-200 rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-orange-500 focus-within:border-orange-500 transition-all hover:border-slate-300">
+                            {/* Preferences Input */}
+                            <div className="flex border border-slate-200 bg-slate-50 rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-orange-500 focus-within:border-orange-500 transition-all hover:border-slate-300">
                                 <div className="bg-slate-50 px-4 flex items-center justify-center border-r border-slate-200 min-w-[60px]">
                                     <Utensils className="text-slate-400" size={20} />
                                 </div>
                                 <input
                                     type="text"
-                                    className="w-full px-4 py-4 outline-none placeholder:text-slate-400 text-slate-700"
+                                    className="w-full px-4 py-4 outline-none placeholder:text-slate-400 text-slate-700 bg-transparent"
                                     placeholder="Favorite Cuisine (Optional)"
                                 />
                             </div>
                         </div>
 
                         {/* Message Input */}
-                        <div className="flex border border-slate-200 rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-orange-500 focus-within:border-orange-500 transition-all hover:border-slate-300">
+                        <div className="flex border border-slate-200 bg-slate-50 rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-orange-500 focus-within:border-orange-500 transition-all hover:border-slate-300">
                             <div className="bg-slate-50 px-4 pt-4 border-r border-slate-200 min-w-[60px]">
                                 <MessageSquare className="text-slate-400" size={20} />
                             </div>
                             <textarea
                                 rows="4"
-                                className="w-full px-4 py-4 outline-none placeholder:text-slate-400 text-slate-700 resize-none h-40"
+                                className="w-full px-4 py-4 outline-none placeholder:text-slate-400 text-slate-700 bg-transparent resize-none h-40"
                                 placeholder="Any specific dietary requirements or messages?"
                             ></textarea>
                         </div>

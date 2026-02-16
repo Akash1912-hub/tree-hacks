@@ -35,7 +35,7 @@ export default function Features() {
     };
 
     return (
-        <section id="issues" className="py-24 bg-[#fbfbf9]">
+        <section id="issues" className="py-24 bg-transparent">
             <div className="container mx-auto px-6 max-w-7xl">
                 <div className="text-center max-w-3xl mx-auto mb-12">
                     <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">

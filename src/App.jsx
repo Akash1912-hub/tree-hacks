@@ -13,9 +13,9 @@ function App() {
       {/* Fluid Background */}
       <div className="fixed inset-0 z-0 opacity-40 pointer-events-none">
         <LiquidEther
-          colors={["#f97316", "#fb923c", "#fdba74"]} // Orange theme colors
+          colors={["#d76609", "#da5a16", "#e16d0e"]}
           mouseForce={20}
-          cursorSize={50}
+          cursorSize={100}
           isViscous
           viscous={30}
           iterationsViscous={32}

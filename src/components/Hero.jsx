@@ -1,5 +1,4 @@
 import { Play, ArrowRight } from 'lucide-react'
-import Aurora from './ui/Aurora'
 import BlurText from './ui/BlurText'
 
 export default function Hero() {
@@ -8,20 +7,13 @@ export default function Hero() {
     };
 
     return (
-        <section id="home" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white">
-            {/* Aurora Background */}
-            <div className="absolute inset-0 z-0 opacity-60">
-                <Aurora
-                    colorStops={["#ffedd5", "#fb923c", "#f97316"]}
-                    amplitude={1.0}
-                    blend={0.5}
-                />
-            </div>
+        <section id="home" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-transparent">
+            {/* Removed Aurora to show global Liquid Background */}
 
             <div className="container mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-12 max-w-7xl">
                 {/* Text Content */}
                 <div className="flex-1 text-center md:text-left">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 text-orange-700 text-sm font-semibold mb-6 border border-orange-100 shadow-sm">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50/80 backdrop-blur-sm text-orange-700 text-sm font-semibold mb-6 border border-orange-100 shadow-sm">
                         <span className="relative flex h-2 w-2">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
@@ -53,7 +45,7 @@ export default function Hero() {
                         <button className="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-bold py-4 px-8 rounded-full transition-all transform hover:-translate-y-1 text-lg shadow-xl shadow-slate-900/10">
                             Pre-order Now <ArrowRight size={20} />
                         </button>
-                        <a href="#demo" className="inline-flex items-center justify-center gap-3 bg-white border-2 border-slate-200 hover:border-orange-500 hover:text-orange-500 text-slate-700 font-bold py-4 px-8 rounded-full transition-all text-lg">
+                        <a href="#demo" className="inline-flex items-center justify-center gap-3 bg-white/80 backdrop-blur-md border-2 border-slate-200 hover:border-orange-500 hover:text-orange-500 text-slate-700 font-bold py-4 px-8 rounded-full transition-all text-lg">
                             <Play fill="currentColor" size={20} />
                             Watch Demo
                         </a>
@@ -62,7 +54,7 @@ export default function Hero() {
 
                 {/* Hero Image / Product Shot */}
                 <div className="flex-1 w-full max-w-lg md:max-w-xl lg:max-w-2xl">
-                    <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 bg-white group hover:scale-[1.02] transition-transform duration-500">
+                    <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 bg-white/90 backdrop-blur-md group hover:scale-[1.02] transition-transform duration-500">
                         <img
                             src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
                             alt="Smart Cooking Assistant Interface"

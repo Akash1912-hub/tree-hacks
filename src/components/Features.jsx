@@ -38,10 +38,10 @@ export default function Features() {
         <section id="issues" className="py-24 bg-transparent">
             <div className="container mx-auto px-6 max-w-7xl">
                 <div className="text-center max-w-3xl mx-auto mb-12">
-                    <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
-                        The <span className="text-orange-500">Daily Struggle</span>
+                    <h2 className="text-5xl md:text-6xl font-black text-slate-900 mb-6 tracking-tighter">
+                        The <span className="bg-gradient-to-r from-orange-500 to-coral-500 bg-clip-text text-transparent">Daily Struggle</span>
                     </h2>
-                    <p className="text-xl text-slate-600 font-medium">Cooking shouldn't be this hard. Sound familiar?</p>
+                    <p className="text-lg md:text-xl text-slate-600 font-medium">Cooking shouldn't be this hard. Sound familiar?</p>
                 </div>
 
                 <div className="relative group">
@@ -77,12 +77,12 @@ export default function Features() {
                         className="flex overflow-x-auto gap-6 md:gap-8 py-8 px-4 snap-x snap-mandatory hide-scrollbar -mx-4 md:mx-0"
                     >
                         {issues.map((issue, index) => (
-                            <div key={index} className="flex-none w-[85vw] md:w-[450px] bg-white p-10 rounded-2xl border border-slate-200 shadow-lg hover:shadow-xl transition-shadow relative snap-center flex flex-col justify-start min-h-[300px]">
+                            <div key={index} className="flex-none w-[85vw] md:w-[450px] bg-white/40 backdrop-blur-xl p-10 rounded-[2rem] border border-white/40 shadow-xl hover:shadow-2xl transition-all duration-500 relative snap-center flex flex-col justify-start min-h-[320px] group/card hover:-translate-y-2">
                                 {/* Header: Stars and Google Logo */}
-                                <div className="flex justify-between items-start mb-6">
-                                    <div className="flex gap-1">
+                                <div className="flex justify-between items-start mb-8">
+                                    <div className="flex gap-1.5">
                                         {[...Array(5)].map((_, i) => (
-                                            <Star key={i} size={24} className="fill-orange-400 text-orange-400" />
+                                            <Star key={i} size={20} className="fill-orange-500 text-orange-500 drop-shadow-[0_0_8px_rgba(249,115,22,0.3)]" />
                                         ))}
                                     </div>
                                     <div className="flex items-center gap-2 text-slate-500 text-sm font-semibold">
@@ -99,7 +99,7 @@ export default function Features() {
                                     </div>
                                 </div>
 
-                                <p className="text-slate-700 leading-relaxed text-xl font-medium">
+                                <p className="text-slate-800 leading-relaxed text-2xl font-bold tracking-tight italic">
                                     "{issue.text}"
                                 </p>
                             </div>

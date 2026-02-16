@@ -46,8 +46,8 @@ export default function Footer() {
                     <div className="flex flex-col gap-4">
                         <h4 className="text-lg font-bold mb-2">Contact us</h4>
                         <div className="text-gray-400 text-sm flex flex-col gap-2">
-                            <p><span className="text-white font-medium">Call us:</span> +918807591205</p>
-                            <p><span className="text-white font-medium">WhatsApp:</span> +918807591205</p>
+                            <p><span className="text-white font-medium">Call us:</span> +91xxxxxxxxxx</p>
+                            <p><span className="text-white font-medium">WhatsApp:</span> +91xxxxxxxxxx</p>
                             <p><span className="text-white font-medium">Email:</span> hi@pantrypilot.ai</p>
                             <div className="mt-4">
                                     {/* <p className="font-medium text-white mb-1">Helpdesk</p>

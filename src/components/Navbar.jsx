@@ -21,7 +21,7 @@ export default function Navbar() {
         `}>
             <div className="w-full px-8 flex justify-between items-center h-full">
                 {/* Logo */}
-                <a href="#" className={`font-extrabold text-orange-500 tracking-tight hover:text-orange-600 transition-all duration-300
+                <a href="#" className={`font-heading font-extrabold text-orange-500 tracking-tight hover:text-orange-600 transition-all duration-300
                     ${isScrolled ? 'text-2xl' : 'text-3xl'}
                 `}>
                     PantryPilot
@@ -29,7 +29,7 @@ export default function Navbar() {
 
                 {/* Desktop Links */}
                 <div className="hidden md:flex items-center gap-8">
-                    <ul className="flex gap-8 font-semibold text-slate-700 text-sm">
+                    <ul className="flex gap-8 font-heading font-semibold text-slate-700 text-sm">
                         <li><a href="#home" className="hover:text-orange-500 transition-colors">Our Product</a></li>
                         <li><a href="#demo" className="hover:text-orange-500 transition-colors">How it Works</a></li>
                         <li><a href="#about" className="hover:text-orange-500 transition-colors">Mission</a></li>
@@ -57,10 +57,10 @@ export default function Navbar() {
                 <div className={`absolute left-0 w-full bg-white border border-slate-200 shadow-xl md:hidden flex flex-col p-6 gap-4 animate-in slide-in-from-top-2 rounded-2xl mt-2
                     ${isScrolled ? 'top-16' : 'top-24'}
                 `}>
-                    <a href="#home" className="text-lg font-medium text-slate-700 hover:text-orange-500 py-2 border-b border-slate-100" onClick={() => setIsOpen(false)}>Our Product</a>
-                    <a href="#demo" className="text-lg font-medium text-slate-700 hover:text-orange-500 py-2 border-b border-slate-100" onClick={() => setIsOpen(false)}>How it Works</a>
-                    <a href="#about" className="text-lg font-medium text-slate-700 hover:text-orange-500 py-2 border-b border-slate-100" onClick={() => setIsOpen(false)}>Mission</a>
-                    <a href="#contact" className="text-lg font-medium text-slate-700 hover:text-orange-500 py-2" onClick={() => setIsOpen(false)}>Contact</a>
+                    <a href="#home" className="text-lg font-heading font-medium text-slate-700 hover:text-orange-500 py-2 border-b border-slate-100" onClick={() => setIsOpen(false)}>Our Product</a>
+                    <a href="#demo" className="text-lg font-heading font-medium text-slate-700 hover:text-orange-500 py-2 border-b border-slate-100" onClick={() => setIsOpen(false)}>How it Works</a>
+                    <a href="#about" className="text-lg font-heading font-medium text-slate-700 hover:text-orange-500 py-2 border-b border-slate-100" onClick={() => setIsOpen(false)}>Mission</a>
+                    <a href="#contact" className="text-lg font-heading font-medium text-slate-700 hover:text-orange-500 py-2" onClick={() => setIsOpen(false)}>Contact</a>
                 </div>
             )}
         </nav>

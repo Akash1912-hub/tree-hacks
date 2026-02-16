@@ -1,14 +1,29 @@
 import { Menu, Search, User, ShoppingCart, X } from 'lucide-react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
+    const [isScrolled, setIsScrolled] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 20)
+        }
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
 
     return (
-        <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-slate-200 z-50 h-20 flex items-center">
-            <div className="container mx-auto px-6 max-w-7xl flex justify-between items-center h-full">
+        <nav className={`fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-in-out flex items-center justify-between
+            ${isScrolled
+                ? 'top-4 w-[90%] max-w-6xl h-16 bg-white/90 backdrop-blur-md shadow-lg rounded-full border border-slate-200/50'
+                : 'top-6 w-[95%] max-w-7xl h-20 bg-white/40 backdrop-blur-sm rounded-2xl border border-white/40 shadow-sm'}
+        `}>
+            <div className="w-full px-8 flex justify-between items-center h-full">
                 {/* Logo */}
-                <a href="#" className="text-2xl font-extrabold text-orange-500 tracking-tight hover:text-orange-600 transition-colors">
+                <a href="#" className={`font-extrabold text-orange-500 tracking-tight hover:text-orange-600 transition-all duration-300
+                    ${isScrolled ? 'text-2xl' : 'text-3xl'}
+                `}>
                     PantryPilot
                 </a>
 
@@ -39,7 +54,9 @@ export default function Navbar() {
 
             {/* Mobile Menu Overlay */}
             {isOpen && (
-                <div className="absolute top-20 left-0 w-full bg-white border-b border-slate-200 shadow-xl md:hidden flex flex-col p-6 gap-4 animate-in slide-in-from-top-2">
+                <div className={`absolute left-0 w-full bg-white border border-slate-200 shadow-xl md:hidden flex flex-col p-6 gap-4 animate-in slide-in-from-top-2 rounded-2xl mt-2
+                    ${isScrolled ? 'top-16' : 'top-24'}
+                `}>
                     <a href="#home" className="text-lg font-medium text-slate-700 hover:text-orange-500 py-2 border-b border-slate-100" onClick={() => setIsOpen(false)}>Our Product</a>
                     <a href="#demo" className="text-lg font-medium text-slate-700 hover:text-orange-500 py-2 border-b border-slate-100" onClick={() => setIsOpen(false)}>How it Works</a>
                     <a href="#about" className="text-lg font-medium text-slate-700 hover:text-orange-500 py-2 border-b border-slate-100" onClick={() => setIsOpen(false)}>Mission</a>
